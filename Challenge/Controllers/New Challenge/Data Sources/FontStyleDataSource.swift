@@ -13,14 +13,11 @@ class FontStyleViewDataSource: NSObject, UICollectionViewDelegate, UICollectionV
     weak var delegate: FontStyleDelegate?
     weak var collection: UICollectionView?
     
-    var styles = [FontStyle]()
+    private var styles = [FontStyle]()
+    private var selectedIndex = 0
     
     var selected: FontStyle? {
-        if let index = collection?.indexPathsForSelectedItems?.first?.item {
-            return styles[index]
-        } else {
-            return nil
-        }
+        return styles[selectedIndex]
     }
     
     init(collection: UICollectionView, delegate: FontStyleDelegate) {
@@ -30,7 +27,7 @@ class FontStyleViewDataSource: NSObject, UICollectionViewDelegate, UICollectionV
         self.collection = collection
         self.collection?.delegate = self
         self.collection?.dataSource = self
-        self.collection?.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .right)
+        self.collection?.selectItem(at: IndexPath(item: selectedIndex, section: 0), animated: false, scrollPosition: .right)
         self.delegate = delegate
     }
     
@@ -46,6 +43,7 @@ class FontStyleViewDataSource: NSObject, UICollectionViewDelegate, UICollectionV
         let style = styles[indexPath.item]
         
         cell.previewLabel.font = UIFont(name: style.name, size: 20)
+        cell.isActive = selectedIndex == indexPath.item
         
         return cell
     }
@@ -53,6 +51,9 @@ class FontStyleViewDataSource: NSObject, UICollectionViewDelegate, UICollectionV
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let style = styles[indexPath.item]
+        
+        selectedIndex = indexPath.item
+        collection?.reloadData()
         delegate?.fontStyleDidSelect(style: style)
     }
 }

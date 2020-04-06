@@ -16,10 +16,10 @@ final class ColorItemView: UIView, NibInstantinable {
     
     var onSelect: (()->())?
     
-    var isSelected: Bool = false {
+    var isActive: Bool = false {
         didSet {
-            selectionView.isHidden = !isSelected
-            checkmarkView.isHidden = !isSelected
+            selectionView.isHidden = !isActive
+            checkmarkView.isHidden = !isActive
         }
     }
     
@@ -32,7 +32,7 @@ final class ColorItemView: UIView, NibInstantinable {
     @IBAction func didSelect(_ sender: UIButton) {
        
         onSelect?()
-        isSelected = true
+        isActive = true
     }
     
     override func layoutSubviews() {

@@ -13,14 +13,11 @@ class BackgroundStyleViewDataSource: NSObject, UICollectionViewDelegate, UIColle
     weak var delegate: BackgroundStyleDelegate?
     weak var collection: UICollectionView?
     
-    var styles = [BackgroundStyle]()
+    private var styles = [BackgroundStyle]()
+    private var selectedIndex = 0
     
     var selected: BackgroundStyle? {
-        if let index = collection?.indexPathsForSelectedItems?.first?.item {
-            return styles[index]
-        } else {
-            return nil
-        }
+        return styles[selectedIndex]
     }
     
     init(collection: UICollectionView, defaultStyle: ColorStyle, delegate: BackgroundStyleDelegate) {
@@ -30,7 +27,7 @@ class BackgroundStyleViewDataSource: NSObject, UICollectionViewDelegate, UIColle
         self.collection = collection
         self.collection?.delegate = self
         self.collection?.dataSource = self
-        self.collection?.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .right)
+        self.collection?.selectItem(at: IndexPath(item: selectedIndex, section: 0), animated: false, scrollPosition: .right)
         self.delegate = delegate
     }
     
@@ -49,6 +46,7 @@ class BackgroundStyleViewDataSource: NSObject, UICollectionViewDelegate, UIColle
         cell.checkmarkView.tintColor = style.type == .color ? style.color?.foreground : .white
         cell.contentView.backgroundColor = style.color?.background
         cell.proBadge.isHidden = style.availability == .free
+        cell.isActive = selectedIndex == indexPath.item
         
         return cell
     }
@@ -56,26 +54,20 @@ class BackgroundStyleViewDataSource: NSObject, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let style = styles[indexPath.item]
-        delegate?.backgroundStyleDidSelect(style: style)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         
-        let style = styles[indexPath.item]
-        
-        if style.availability == .pro {
+        if style.availability == .free {
+            selectedIndex = indexPath.item
+            collection?.reloadData()
+            delegate?.backgroundStyleDidSelect(style: style)
+        } else {
             delegate?.backgroundStyleGetPro()
         }
-        
-        return style.availability == .free
     }
-    
+
     func update(defaultStyle: ColorStyle) {
         
-        let index = collection?.indexPathsForSelectedItems?.first
         styles = BackgroundStyle.backgroundsWithDefault(style: defaultStyle)
         collection?.reloadData()
-        collection?.selectItem(at: index, animated: true, scrollPosition: .right)
     }
 }
 

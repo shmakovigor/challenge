@@ -16,10 +16,10 @@ class BackgroundStyleCell: UICollectionViewCell {
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var checkmarkView: UIImageView!
     
-    override var isSelected: Bool {
+    var isActive: Bool = false {
         didSet {
-            selectionView.isHidden = !isSelected
-            checkmarkView.isHidden = !isSelected
+            selectionView.isHidden = !isActive
+            checkmarkView.isHidden = !isActive
         }
     }
     

@@ -11,9 +11,9 @@ import UIKit
 class ColorPickerView: UIStackView {
 
     weak var delegate: ColorPickerViewDelegate?
-    var selectedDefault: Int? = 0
     
     let defaultColors = ColorStyle.defaultColors
+    var selectedDefault: Int? = 0
     
     lazy var defaultColorViews: [ColorItemView] = {
         return defaultColors.map { ColorItemView.view.with(color: $0.background) }
@@ -48,7 +48,7 @@ class ColorPickerView: UIStackView {
         
         for (index, view) in defaultColorViews.enumerated() {
             
-            view.isSelected = index == selectedDefault
+            view.isActive = index == selectedDefault
             view.onSelect = { self.selectDefault(at: index) }
             addArrangedSubview(view)
         }
@@ -62,7 +62,7 @@ class ColorPickerView: UIStackView {
     func selectDefault(at index: Int?) {
         
         if let selected = selectedDefault {
-            defaultColorViews[selected].isSelected = false
+            defaultColorViews[selected].isActive = false
         }
         
         selectedDefault = index

@@ -14,9 +14,9 @@ class FontStyleCell: UICollectionViewCell {
     @IBOutlet weak var selectionInnerView: UIView!
     @IBOutlet weak var previewLabel: UILabel!
     
-    override var isSelected: Bool {
+    var isActive: Bool = false {
         didSet {
-            selectionView.isHidden = !isSelected
+            selectionView.isHidden = !isActive
         }
     }
     
