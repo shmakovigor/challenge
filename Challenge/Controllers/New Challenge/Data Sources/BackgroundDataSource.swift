@@ -20,10 +20,10 @@ class BackgroundStyleViewDataSource: NSObject, UICollectionViewDelegate, UIColle
         return styles[selectedIndex]
     }
     
-    init(collection: UICollectionView, defaultStyle: ColorStyle, delegate: BackgroundStyleDelegate) {
+    init(collection: UICollectionView, colorStyle: ColorStyle, delegate: BackgroundStyleDelegate) {
         
         super.init()
-        self.styles = BackgroundStyle.backgroundsWithDefault(style: defaultStyle)
+        self.styles = BackgroundStyle.backgroundsWithDefault(style: colorStyle)
         self.collection = collection
         self.collection?.delegate = self
         self.collection?.dataSource = self
@@ -64,9 +64,10 @@ class BackgroundStyleViewDataSource: NSObject, UICollectionViewDelegate, UIColle
         }
     }
 
-    func update(defaultStyle: ColorStyle) {
+    func update(colorStyle: ColorStyle) {
         
-        styles = BackgroundStyle.backgroundsWithDefault(style: defaultStyle)
+        styles = BackgroundStyle.backgroundsWithDefault(style: colorStyle)
+        selectedIndex = 0
         collection?.reloadData()
     }
 }

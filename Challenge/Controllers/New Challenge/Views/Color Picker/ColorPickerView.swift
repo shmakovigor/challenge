@@ -59,6 +59,15 @@ class ColorPickerView: UIStackView {
         showingPallete = false
     }
     
+    func selectDefault(style: ColorStyle) {
+        
+        if let index = defaultColors.firstIndex(where: { $0.background.isEqual(style.background) }) {
+            selectDefault(at: index)
+        } else {
+            selectDefault(at: nil)
+        }
+    }
+    
     func selectDefault(at index: Int?) {
         
         if let selected = selectedDefault {
@@ -68,6 +77,7 @@ class ColorPickerView: UIStackView {
         selectedDefault = index
         
         if let index = index {
+            defaultColorViews[index].isActive = true
             delegate?.colorPickerDidSelect(style: defaultColors[index])
         }
     }

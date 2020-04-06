@@ -17,7 +17,7 @@ extension ColorStyle {
     
     static let defaultColors = [
         ColorStyle(
-            background: UIColor(white: 0.95, alpha: 1),
+            background: .myGray,
             foreground: .black
         ),
         ColorStyle(

@@ -51,7 +51,7 @@ class NewChallengeViewController: UIViewController {
         
         backgroundDataSource = BackgroundStyleViewDataSource(
             collection: backgroundPickerView,
-            defaultStyle: ColorStyle(background: .myGray, foreground: .black),
+            colorStyle: ColorStyle.defaultColors.first!,
             delegate: self
         )
         
@@ -177,6 +177,12 @@ extension NewChallengeViewController: BackgroundStyleDelegate {
         
         background = style
         updateStyle()
+        
+        if style.type == .image {
+            colorPickerView.selectDefault(at: nil)
+        } else if let color = style.color {
+            colorPickerView.selectDefault(style: color)
+        }
     }
     
     func backgroundStyleGetPro() {
@@ -190,8 +196,10 @@ extension NewChallengeViewController: ColorPickerViewDelegate {
     
     func colorPickerDidSelect(style: ColorStyle) {
         
+        backgroundDataSource?.update(colorStyle: style)
+        
         color = style
-        backgroundDataSource?.update(defaultStyle: style)
+        background = backgroundDataSource?.selected
         updateStyle()
     }
 }
