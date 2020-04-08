@@ -9,7 +9,7 @@
 import UIKit
 import UITextView_Placeholder
 
-class NewChallengeViewController: UIViewController {
+final class NewChallengeViewController: UIViewController, Instantinable {
 
     @IBOutlet weak var navigationBar: UIView!
     @IBOutlet weak var backButton: RoundedButton!
@@ -29,6 +29,7 @@ class NewChallengeViewController: UIViewController {
     var fontDataSource: FontStyleViewDataSource?
     var backgroundDataSource: BackgroundStyleViewDataSource?
     
+    var challenge: Challenge?
     var font: FontStyle?
     var background: BackgroundStyle?
     var color: ColorStyle?
@@ -36,6 +37,7 @@ class NewChallengeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        challengeNameLabel.text = challenge?.name
         keyboardButton.isHidden = true
         postButton.isEnabled = false
         
@@ -133,7 +135,7 @@ class NewChallengeViewController: UIViewController {
     
     @IBAction func backDidPress(_ sender: Any) {
         
-        show(message: "Back pressed.", title: "Info")
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func postDidPress(_ sender: Any) {

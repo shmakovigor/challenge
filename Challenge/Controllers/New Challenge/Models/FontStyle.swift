@@ -9,6 +9,7 @@
 import Foundation
 
 struct FontStyle {
+   
     var name: String
 }
 

@@ -9,6 +9,7 @@
 import UIKit
 
 struct ColorStyle {
+  
     var background: UIColor
     var foreground: UIColor
 }

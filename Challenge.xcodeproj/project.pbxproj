@@ -19,12 +19,20 @@
 		F868EED6243A15C7003D1794 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F868EED5243A15C7003D1794 /* ColorPickerView.swift */; };
 		F88A0C0F243B2F4F003022CE /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A0C0E243B2F4F003022CE /* ColorStyle.swift */; };
 		F88A0C12243B3226003022CE /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88A0C11243B3226003022CE /* ColorPaletteView.swift */; };
+		F89B8C41243DD74B0057A4D3 /* CAMediaTimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B8C40243DD74B0057A4D3 /* CAMediaTimingFunction.swift */; };
+		F89B8C43243DF2AD0057A4D3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B8C42243DF2AD0057A4D3 /* UIView.swift */; };
+		F89B8C46243DF7DE0057A4D3 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B8C45243DF7DE0057A4D3 /* NavigationController.swift */; };
+		F89B8C48243DF80B0057A4D3 /* Animators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B8C47243DF80B0057A4D3 /* Animators.swift */; };
 		F89BB427243B577000D9DA96 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89BB426243B577000D9DA96 /* UIViewController.swift */; };
 		F8EDB3E42439EDD300FDB179 /* DynamicFontTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EDB3E32439EDD300FDB179 /* DynamicFontTextView.swift */; };
 		F8EDB3E62439F73B00FDB179 /* FontStyleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EDB3E52439F73B00FDB179 /* FontStyleDataSource.swift */; };
 		F8EDB3E82439F74800FDB179 /* BackgroundDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EDB3E72439F74800FDB179 /* BackgroundDataSource.swift */; };
 		F8EDB3ED2439F7AB00FDB179 /* FontStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EDB3EC2439F7AB00FDB179 /* FontStyleCell.swift */; };
 		F8EDB3EF2439F7BE00FDB179 /* BackgroundStyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EDB3EE2439F7BE00FDB179 /* BackgroundStyleCell.swift */; };
+		F8EF9670243E169500850762 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EF966F243E169500850762 /* Challenge.swift */; };
+		F8EF9672243E189700850762 /* Instantinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EF9671243E189700850762 /* Instantinable.swift */; };
+		F8EF9674243E1BB100850762 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EF9673243E1BB100850762 /* Utils.swift */; };
+		F8FD3315243DC6FF002999B7 /* RandomAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FD3314243DC6FF002999B7 /* RandomAnswerViewController.swift */; };
 		F8FF09A52439D6C500C260F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FF09A42439D6C500C260F1 /* AppDelegate.swift */; };
 		F8FF09A72439D6C500C260F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FF09A62439D6C500C260F1 /* SceneDelegate.swift */; };
 		F8FF09A92439D6C500C260F1 /* NewChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FF09A82439D6C500C260F1 /* NewChallengeViewController.swift */; };
@@ -48,12 +56,20 @@
 		F868EED5243A15C7003D1794 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		F88A0C0E243B2F4F003022CE /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		F88A0C11243B3226003022CE /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
+		F89B8C40243DD74B0057A4D3 /* CAMediaTimingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAMediaTimingFunction.swift; sourceTree = "<group>"; };
+		F89B8C42243DF2AD0057A4D3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F89B8C45243DF7DE0057A4D3 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		F89B8C47243DF80B0057A4D3 /* Animators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animators.swift; sourceTree = "<group>"; };
 		F89BB426243B577000D9DA96 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F8EDB3E32439EDD300FDB179 /* DynamicFontTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFontTextView.swift; sourceTree = "<group>"; };
 		F8EDB3E52439F73B00FDB179 /* FontStyleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleDataSource.swift; sourceTree = "<group>"; };
 		F8EDB3E72439F74800FDB179 /* BackgroundDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundDataSource.swift; sourceTree = "<group>"; };
 		F8EDB3EC2439F7AB00FDB179 /* FontStyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleCell.swift; sourceTree = "<group>"; };
 		F8EDB3EE2439F7BE00FDB179 /* BackgroundStyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyleCell.swift; sourceTree = "<group>"; };
+		F8EF966F243E169500850762 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		F8EF9671243E189700850762 /* Instantinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantinable.swift; sourceTree = "<group>"; };
+		F8EF9673243E1BB100850762 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F8FD3314243DC6FF002999B7 /* RandomAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAnswerViewController.swift; sourceTree = "<group>"; };
 		F8FF09A12439D6C500C260F1 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FF09A42439D6C500C260F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8FF09A62439D6C500C260F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +117,9 @@
 			children = (
 				F82E03CF2439E633008F3957 /* Extensions */,
 				F868EED3243A14BD003D1794 /* NibInstantinable.swift */,
+				F8EF9671243E189700850762 /* Instantinable.swift */,
+				F89B8C47243DF80B0057A4D3 /* Animators.swift */,
+				F8EF9673243E1BB100850762 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -109,7 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				F82E03D02439E643008F3957 /* UIColor.swift */,
+				F89B8C40243DD74B0057A4D3 /* CAMediaTimingFunction.swift */,
 				F89BB426243B577000D9DA96 /* UIViewController.swift */,
+				F89B8C42243DF2AD0057A4D3 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,6 +164,14 @@
 			path = "Color Picker";
 			sourceTree = "<group>";
 		};
+		F89B8C44243DF7C70057A4D3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F89B8C45243DF7DE0057A4D3 /* NavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		F8EDB3E92439F75000FDB179 /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,12 +191,29 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F8EF966E243E167100850762 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8EF966F243E169500850762 /* Challenge.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F8F143C30F1B03E59D72325A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				7F8AF050D0015E555B96A285 /* Pods_Challenge.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8FD3313243DC6E6002999B7 /* Random Answer */ = {
+			isa = PBXGroup;
+			children = (
+				F8FD3314243DC6FF002999B7 /* RandomAnswerViewController.swift */,
+				F8EF966E243E167100850762 /* Models */,
+			);
+			path = "Random Answer";
 			sourceTree = "<group>";
 		};
 		F8FF09982439D6C500C260F1 = {
@@ -212,7 +258,9 @@
 		F8FF09B92439D7E000C260F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F89B8C44243DF7C70057A4D3 /* Base */,
 				F8FF09BA2439D7F400C260F1 /* New Challenge */,
+				F8FD3313243DC6E6002999B7 /* Random Answer */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -360,12 +408,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F89B8C48243DF80B0057A4D3 /* Animators.swift in Sources */,
 				F82E03CD2439E211008F3957 /* GradientButton.swift in Sources */,
+				F8EF9674243E1BB100850762 /* Utils.swift in Sources */,
 				F8EDB3EF2439F7BE00FDB179 /* BackgroundStyleCell.swift in Sources */,
+				F89B8C43243DF2AD0057A4D3 /* UIView.swift in Sources */,
 				F868EECB2439FACF003D1794 /* FontStyle.swift in Sources */,
 				F89BB427243B577000D9DA96 /* UIViewController.swift in Sources */,
 				F8EDB3E82439F74800FDB179 /* BackgroundDataSource.swift in Sources */,
+				F89B8C41243DD74B0057A4D3 /* CAMediaTimingFunction.swift in Sources */,
 				F82E03D12439E643008F3957 /* UIColor.swift in Sources */,
+				F8EF9670243E169500850762 /* Challenge.swift in Sources */,
+				F8EF9672243E189700850762 /* Instantinable.swift in Sources */,
 				F88A0C0F243B2F4F003022CE /* ColorStyle.swift in Sources */,
 				F8FF09A92439D6C500C260F1 /* NewChallengeViewController.swift in Sources */,
 				F868EECF243A1308003D1794 /* ColorItemView.swift in Sources */,
@@ -373,7 +427,9 @@
 				F868EED6243A15C7003D1794 /* ColorPickerView.swift in Sources */,
 				F868EED4243A14BD003D1794 /* NibInstantinable.swift in Sources */,
 				F8FF09A52439D6C500C260F1 /* AppDelegate.swift in Sources */,
+				F89B8C46243DF7DE0057A4D3 /* NavigationController.swift in Sources */,
 				F8FF09A72439D6C500C260F1 /* SceneDelegate.swift in Sources */,
+				F8FD3315243DC6FF002999B7 /* RandomAnswerViewController.swift in Sources */,
 				F868EECD2439FADB003D1794 /* BackgroundStyle.swift in Sources */,
 				F82E03CB2439DEDD008F3957 /* RoundedButton.swift in Sources */,
 				F8EDB3E42439EDD300FDB179 /* DynamicFontTextView.swift in Sources */,
