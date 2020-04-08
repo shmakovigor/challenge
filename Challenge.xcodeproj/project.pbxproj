@@ -70,7 +70,7 @@
 		F8EF9671243E189700850762 /* Instantinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantinable.swift; sourceTree = "<group>"; };
 		F8EF9673243E1BB100850762 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F8FD3314243DC6FF002999B7 /* RandomAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAnswerViewController.swift; sourceTree = "<group>"; };
-		F8FF09A12439D6C500C260F1 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8FF09A12439D6C500C260F1 /* Feedie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feedie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FF09A42439D6C500C260F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8FF09A62439D6C500C260F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F8FF09A82439D6C500C260F1 /* NewChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChallengeViewController.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 		F8FF09A22439D6C500C260F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8FF09A12439D6C500C260F1 /* Challenge.app */,
+				F8FF09A12439D6C500C260F1 /* Feedie.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -306,7 +306,7 @@
 			);
 			name = Challenge;
 			productName = Challange;
-			productReference = F8FF09A12439D6C500C260F1 /* Challenge.app */;
+			productReference = F8FF09A12439D6C500C260F1 /* Feedie.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -586,10 +586,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.Challenge;
-				PRODUCT_NAME = Challenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gettable.challenge;
+				PRODUCT_NAME = Feedie;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -605,10 +605,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.Challenge;
-				PRODUCT_NAME = Challenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gettable.challenge;
+				PRODUCT_NAME = Feedie;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
